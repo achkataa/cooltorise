@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/f50f339568.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body onscroll="reveal()">
+    <header class="header">
+        <div class="logo">
+            <img src="../images/logo.png" alt="logo">
+            <span>COOLTORISE</span>
+        </div>
+        <nav>
+            <ul role="list" class="navbar">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">THE CONSORTIUM</a></li>
+                <li><a href="#">COMMUNICATION</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img src="../images/background.jpg" alt="bg-img">
+        <p><span class="auto-type"></span></p>
+
+        <section class="wrapper">
+            <section class="objectives slide">
+                <h1>OBJECTIVES</h1>
+                <div class="objective">
+                    <p>Set a common framework on summer energy poverty</p>
+                </div>
+
+                <div class="objective">
+                    <p>Define solutions to tackle summer energy poverty</p>
+                </div>
+
+                <div class="objective">
+                    <p>Train energy poverty agents to work with energy poor households</p>
+                </div>
+
+                <div class="objective">
+                    <p>Alleviate summer energy poverty conditions of more than 7,240 people</p>
+                </div>
+
+                <div class="objective">
+                    <p>Foster women’s empowerment to try to revert the feminisation of energy poverty</p>
+                </div>
+
+                <div class="objective">
+                    <p>Accomplish a high level of dissemination that brings to the fore the issue of summer energy
+                        poverty</p>
+                </div>
+            </section>
+
+            <!-- <section class="message">
+                <p>Let’s work together on improving
+                    summer indoor and outdoor comfort!</p>
+            </section> -->
+        </section>
+
+        <section class="partners">
+            <h2>OUR VALUABLE PARTNERS IN THIS PROJECT</h2>
+            <div class="container">
+                <div class="img-wrapper">
+                    <img src="../images/CdP-logo.png" alt="">
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="../images/CSEG-logo.png" alt="">
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="../images/Logo-Aisfor.png" alt="">
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="../images/logo-HD.png" alt="">
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="../images/logos_simples.png" alt="">
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="../images/Peshtera-gerb.png" alt="">
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="../images/UPM.png" alt="">
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="../images/Vilabs_LOGO.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <button class="arrow-left" onclick="plusDivs(-1)"><i class="fa-solid fa-arrow-left fa-2x"></i></button>
+            <article class="main-news">
+                <img src="../images/news-images/first-news-image.jpg" alt="">
+                <h3>Presentation of Cooltorise at an Annual Conference on Energy Poverty in Bulgaria</h3>
+            </article>
+
+            <article class="secondary-news">
+                <article class="main-news">
+                    <img src="../images/news-images/second-news-image.jpg" alt="">
+                    <h3>A look at 2022 through the experiences of Cooltorise</h3>
+                </article>
+
+                <article class="main-news">
+                    <img src="../images/news-images/third-news-image.jpg" alt="">
+                    <h3>Global warming and the invisibility of summer energy poverty</h3>
+                </article>
+
+                <article class="main-news">
+                    <img src="../images/news-images/fourth-news-image.jpg" alt="">
+                    <h3>Prosvasi talks: The energy crisis in practical terms</h3>
+                </article>
+            </article>
+
+            <button class="arrow-right" onclick="plusDivs(1)"><i class="fa-solid fa-arrow-right fa-2x"></i></button>
+        </section>
+
+        <section class="message">
+            <div class="img-wrapper-message">
+                <img src="../images/barcelona-1024x462.jpeg" alt="barcelona img">
+            </div>
+            <div class="message-wrapper">
+                <h1>Let’s work together on improving
+                    summer indoor and outdoor comfort!</h1>
+    
+                <button class="btn">LEARN MORE</button>
+            </div>
+
+            <footer>
+                <p>Copyright &copy; 2023 Cooltorise. All rights reserved</p>
+        
+        
+                <ul role="list" class="socials">
+                    <li><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+                </ul>
+            </footer>
+        </section>
+
+    </main>
+
+    <script>
+        var typed = new Typed('.auto-type', {
+            strings: ['Raising summer energy poverty awareness to reduce cooling needs.'],
+            typeSpeed: 50,
+            loop: false
+        })
+
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("main-news");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        
+
+        let header = document.querySelector('.header')
+        
+        header.addEventListener('scroll', function() {
+            header.style.display = 'none'
+        })
+
+        header.addEventListener()
+
+        function reveal() {
+            console.log('hello')
+            let reveal = document.querySelector(".objectives");
+            let windowHeight = window.innerHeight;
+            let revealTop = reveal.getBoundingClientRect().top;
+            var elementVisible = 200;
+            if (revealTop < windowHeight - elementVisible) {
+                reveal.classList.add('current')
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

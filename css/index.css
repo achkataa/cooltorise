@@ -1,0 +1,366 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slide { opacity: 0; }
+
+.slide.current {
+    opacity: 1;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn; 
+    animation-duration: 1.5s;   
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;     
+    visibility: visible !important; 
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;       
+    }
+    60% {
+        transform: scale(1.1);  
+    }
+    80% {
+        transform: scale(0.9);
+        opacity: 1; 
+    }   
+    100% {
+        transform: scale(1);
+        opacity: 1; 
+    }       
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0.0;       
+    }
+    60% {
+        -webkit-transform: scale(1.1);
+    }
+    80% {
+        -webkit-transform: scale(0.9);
+        opacity: 1; 
+    }   
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1; 
+    }       
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: white;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.8;
+    -webkit-box-shadow: 0px 15px 25px -5px rgba(0,0,0,0.69);
+    -moz-box-shadow: 0px 15px 25px -5px rgba(0,0,0,0.69);
+    box-shadow: 0px 15px 25px -5px rgba(0,0,0,0.69);
+    z-index: 10;
+
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s linear;
+}
+
+header ul li a:hover {
+    color: #2979b1;
+}
+
+header img{
+    width: 60px;
+    height: 60px;
+}
+
+main img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+main > p {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    font-size: 32px;
+    width: 30%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* objectives */
+
+.wrapper {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.objectives h1 {
+    font-size: 32px;
+    color: #2979b1;
+}
+
+
+.objectives {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0px, 30px;
+    gap: 20px;
+}
+
+.objective {
+    background-color: #2979b1;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 2px;
+    height: 60px;
+    position: relative;
+    transition: all 0.3s linear;
+}
+
+.objective:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    border-top: 30px solid white;
+    border-left: 30px solid #2979b1;
+    border-bottom: 30px solid white;
+    width: 0;
+}
+
+.objective:hover {
+    opacity: 0.8;
+}
+
+.objective p {
+    font-size: 17px;
+}
+
+/* partners */
+
+.partners {
+    background-color: black;
+    opacity: 0.8;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.partners h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.img-wrapper {
+    width: 120px;
+    height: 120px;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-wrapper:hover {
+    transform: scale(1.2);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* news */
+
+.news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.main-news {
+    width: 500px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-news h3 {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    opacity: 0.9;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-news h3:hover {
+    color: #2979b1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main-news img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow-left, .arrow-right {
+    background-color: transparent;
+    border: none;
+}
+
+.arrow-left {
+    margin-right: 50px;
+}
+
+.arrow-right {
+    margin-left: 50px;
+}
+
+/* message */
+
+.message {
+    position: relative;
+    height: 100vh;
+}
+
+.message .img-wrapper-message {
+    width: 100%;
+    height: 100%;
+}
+
+.message::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+
+}
+
+.img-wrapper-message img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.message-wrapper h1 {
+    font-size: 44px;
+    color: white;
+    width: 450px;
+    border-left: 5px solid white;
+    padding-left: 20px;
+}
+
+.message-wrapper button {
+    height: 45px;
+    align-self: center;
+    padding: 8px 26px;
+    background-color: #2979b1;
+    color: white;
+    border: none;
+    /* border: 1px solid white; */
+    border-radius: 4px;
+    background-color: #e8393a;
+    transition: all 0.3s ease-in-out;
+}
+
+.message-wrapper button:hover {
+    background-color: white;
+    color: #e8393a;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    z-index: 100;
+    width: 100%;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer ul li a i {
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+footer ul li a i:hover {
+    color: #2979b1;
+}
+
+
+
